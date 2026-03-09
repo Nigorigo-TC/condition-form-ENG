@@ -130,7 +130,7 @@
 
     <!-- 6. 睡眠時間 -->
     <label>
-      6. Amount of sleep（ex. 7h15min→7.15, 7h30min→7.5）
+      6. Amount of sleep（e.g., 7h15min→7.15, 7h30min→7.5）
       <input type="number" name="sleep_time" min="0" max="24" step="0.1" />
       <small>※ You can also enter it manually</small>
     </label>
@@ -150,67 +150,67 @@
       <legend>8. Sleep quality</legend>
       <div class="checkbox-group">
         <label><input type="checkbox" name="sleep_issues" value="夢を見た" />Had a dream</label>
-        <label><input type="checkbox" name="sleep_issues" value="何回も目覚めた" />何回も目覚めた</label>
-        <label><input type="checkbox" name="sleep_issues" value="何回もトイレに行った" />何回もトイレに行った</label>
-        <label><input type="checkbox" name="sleep_issues" value="寝汗をかいた" />寝汗をかいた</label>
-        <label><input type="checkbox" name="sleep_issues" value="寝付けなかった" />寝付けなかった</label>
-        <label><input type="checkbox" name="sleep_issues" value="普段より寝付けなかった" />普段より寝付けなかった</label>
-        <label><input type="checkbox" name="sleep_issues" value="特になし" />特になし</label>
+        <label><input type="checkbox" name="sleep_issues" value="何回も目覚めた" />Woke up many times</label>
+        <label><input type="checkbox" name="sleep_issues" value="何回もトイレに行った" />Went to restroom many times</label>
+        <label><input type="checkbox" name="sleep_issues" value="寝汗をかいた" />Perspired in sleep</label>
+        <label><input type="checkbox" name="sleep_issues" value="寝付けなかった" />Could not fall asleep</label>
+        <label><input type="checkbox" name="sleep_issues" value="普段より寝付けなかった" />Harder than usual to fall asleep</label>
+        <label><input type="checkbox" name="sleep_issues" value="特になし" />None</label>
       </div>
     </fieldset>
 
     <!-- 9. 食欲 -->
     <label>
-      9. 食欲
+      9. Appetite
       <div class="slider-row">
-        <span>全く無い</span>
+        <span>Very small</span>
         <input type="range" name="appetite" min="0" max="100" value="50" />
-        <span>とてもある</span>
+        <span>Very big</span>
       </div>
     </label>
 
     <!-- 10. 故障・怪我の有無 -->
     <fieldset>
-      <legend>10. 故障・怪我の有無</legend>
+      <legend>10. Injury</legend>
       <div class="radio-group">
-        <label><input type="radio" name="injury" value="無" checked />無</label>
-        <label><input type="radio" name="injury" value="有" />有</label>
+        <label><input type="radio" name="injury" value="無" checked />without</label>
+        <label><input type="radio" name="injury" value="有" />with</label>
       </div>
     </fieldset>
 
     <!-- 11. 故障・怪我の箇所（※ 有を選んだときだけ表示） -->
     <label id="injury-part-wrapper" style="display:none;">
-      11. 故障・怪我の箇所
+      11. Injured area
       <input type="text" name="injury_part" />
-      <small>※ 故障・怪我がある場合は部位を具体的に入力してください（例：右足首）</small>
+      <small>※ If you are injured, please describe the specific location of the injury (e.g., right ankle)</small>
     </label>
 
     <!-- 12. 故障・怪我の程度 -->
     <label>
-      12. 故障・怪我の程度
+      12. Severity of injury
       <div class="slider-row">
-        <span>全くない</span>
+        <span>No Pain</span>
         <input type="range" name="injury_severity" min="0" max="100" value="50" />
-        <span>練習ができない</span>
+        <span>Worst Pain</span>
       </div>
     </label>
 
     <!-- 13. 練習強度 -->
     <label>
-      13. 練習強度
+      13. Training intensity
       <div class="slider-row">
-        <span>非常に楽</span>
+        <span>Very Easy</span>
         <input type="range" name="training_intensity" min="0" max="100" value="50" />
-        <span>非常にきつい</span>
+        <span>Very Hard</span>
       </div>
     </label>
 
     <!-- 14. 排便の有無 -->
     <fieldset>
-      <legend>14. 前日の排便の有無</legend>
+      <legend>14. Defecation (yesterday)</legend>
       <div class="radio-group">
-        <label><input type="radio" name="bowel_movement" value="有" checked />有</label>
-        <label><input type="radio" name="bowel_movement" value="無" />無</label>
+        <label><input type="radio" name="bowel_movement" value="有" checked />Yes</label>
+        <label><input type="radio" name="bowel_movement" value="無" />No</label>
       </div>
     </fieldset>
 
@@ -219,9 +219,9 @@
       <p>便の形（1〜7）</p>
       <img src="stool_chart.png" alt="便の形チャート" />
       <label>
-        15. 前日の便の形
+        15. Type of stool (yesterday)
         <select name="bowel_shape">
-          <option value="">選択してください</option>
+          <option value="">please select</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -230,83 +230,83 @@
           <option value="6">6</option>
           <option value="7">7</option>
         </select>
-        <small>※ 上記の画像を参考に選択してください</small>
+        <small>※ please select based on the image</small>
       </label>
     </div>
 
     <!-- 16. 走行距離 -->
     <label>
-      16. 前日の走行距離（km）
+      16. Running distance (yesterday)
       <input type="number" name="running_distance" min="0" max="100" step="0.1" />
-      <small>※ 手入力もできます</small>
+      <small>※ You can also enter it manually</small>
     </label>
 
     <!-- 17. SpO2 -->
     <label>
-      17. SpO₂（％）
+      17. SpO₂
       <input type="number" name="spo2" min="0" max="100" />
-      <small>※ 手入力もできます</small>
+      <small>※ You can also enter it manually</small>
     </label>
 
     <!-- 18. 脈拍数 -->
     <label>
-      18. 脈拍数（拍/分）
+      18. Pulse rate
       <input type="number" name="pulse" min="0" max="200" />
-      <small>※ 手入力もできます</small>
+      <small>※ You can also enter it manually</small>
     </label>
 
     <!-- 19. 体温 -->
     <label>
-      19. 体温（℃）
+      19. Body temperature
       <input type="number" name="temperature" min="0" max="42" step="0.1" />
-      <small>※ 手入力もできます</small>
+      <small>※ You can also enter it manually</small>
     </label>
 
     <!-- 20. 体重 -->
     <label>
-      20. 体重（kg）
+      20. Body weight
       <input type="number" name="weight" min="0" max="150" step="0.1" />
-      <small>※ 手入力もできます</small>
+      <small>※ You can also enter it manually</small>
     </label>
 
     <!-- 21. 特記事項 -->
     <fieldset>
-      <legend>21. 特記事項（複数選択）</legend>
+      <legend>21. Special notes（multiple choice）</legend>
       <div class="checkbox-group">
-        <label><input type="checkbox" name="symptoms" value="特になし" />特になし</label>
-        <label><input type="checkbox" name="symptoms" value="咳" />咳</label>
-        <label><input type="checkbox" name="symptoms" value="鼻水" />鼻水</label>
-        <label><input type="checkbox" name="symptoms" value="頭痛" />頭痛</label>
-        <label><input type="checkbox" name="symptoms" value="息苦しさ" />息苦しさ</label>
-        <label><input type="checkbox" name="symptoms" value="下痢" />下痢</label>
-        <label><input type="checkbox" name="symptoms" value="喉の痛み" />喉の痛み</label>
-        <label><input type="checkbox" name="symptoms" value="悪寒" />悪寒</label>
-        <label><input type="checkbox" name="symptoms" value="腹痛" />腹痛</label>
-        <label><input type="checkbox" name="symptoms" value="熱感" />熱感</label>
-        <label><input type="checkbox" name="symptoms" value="倦怠感" />倦怠感</label>
-        <label><input type="checkbox" name="symptoms" value="吐き気" />吐き気</label>
-        <label><input type="checkbox" name="symptoms" value="痰" />痰</label>
-        <label><input type="checkbox" name="symptoms" value="月経" />月経</label>
-        <label><input type="checkbox" name="symptoms" value="月経痛（腰痛・下腹部痛等）" />月経痛（腰痛・下腹部痛等）</label>
-        <label><input type="checkbox" name="symptoms" value="月経前不調（腰痛やむくみ、体重増加）" />月経前不調（腰痛やむくみ、体重増加）</label>
-        <label><input type="checkbox" name="symptoms" value="不正出血" />不正出血</label>
-        <label><input type="checkbox" name="symptoms" value="服薬" />服薬</label>
-        <label><input type="checkbox" name="symptoms" value="その他" />その他</label>
+        <label><input type="checkbox" name="symptoms" value="特になし" />None</label>
+        <label><input type="checkbox" name="symptoms" value="咳" />Cough</label>
+        <label><input type="checkbox" name="symptoms" value="鼻水" />Runny nose</label>
+        <label><input type="checkbox" name="symptoms" value="頭痛" />Headache</label>
+        <label><input type="checkbox" name="symptoms" value="息苦しさ" />Shortness of breath</label>
+        <label><input type="checkbox" name="symptoms" value="下痢" />Diarrhea</label>
+        <label><input type="checkbox" name="symptoms" value="喉の痛み" />Sore throat</label>
+        <label><input type="checkbox" name="symptoms" value="悪寒" />Chills</label>
+        <label><input type="checkbox" name="symptoms" value="腹痛" />Abdominal pain</label>
+        <label><input type="checkbox" name="symptoms" value="熱感" />Feeling feverish</label>
+        <label><input type="checkbox" name="symptoms" value="倦怠感" />Severe fatigue (extreme tiredness)</label>
+        <label><input type="checkbox" name="symptoms" value="吐き気" />Nausea</label>
+        <label><input type="checkbox" name="symptoms" value="痰" />Phlegm</label>
+        <label><input type="checkbox" name="symptoms" value="月経" />Menstruation</label>
+        <label><input type="checkbox" name="symptoms" value="月経痛（腰痛・下腹部痛等）" />Menstrual pain (e.g., lower abdominal pain, lower back pain)</label>
+        <label><input type="checkbox" name="symptoms" value="月経前不調（腰痛やむくみ、体重増加）" />Premenstrual symptoms (e.g., lower back, edema, weight gain) </label>
+        <label><input type="checkbox" name="symptoms" value="不正出血" />Irregular bleeding</label>
+        <label><input type="checkbox" name="symptoms" value="服薬" />Medication</label>
+        <label><input type="checkbox" name="symptoms" value="その他" />Other (please specify)</label>
       </div>
-      <small>※ 特にない場合は「特になし」を選択してください</small>
+      <small>※ If none apply, please select 'None'</small>
     </fieldset>
 
     <!-- 21-1. その他（※ その他を選んだときだけ表示） -->
     <label id="other-symptoms-wrapper" style="display:none;">
-      21-1. その他の症状
+      21-1. Other symptoms
       <input type="text" name="other_symptoms" />
     </label>
 
     <!-- 22. トレーニング時間 -->
     <label>
-      22. 前日のトレーニング時間（分）
+      22. Yesterday's training time（min） ※ You can also enter it manually
       <input type="number" name="exercise_time" min="0" max="300" />
-      <small>※ ウォームアップおよびクールダウンの時間は含めなくて大丈夫です</small>
+      <small>※ Warm-up and cool-down time don't need tobe included</small>
     </label>
 
     <!-- 23. 運動のきつさ（RPE） -->
@@ -314,10 +314,10 @@
       <p>運動のきつさ（0～10）</p>
       <img src="rpe_chart.png" alt="RPEチャート" />
       <label>
-        23. 前日の運動のきつさ（RPE）
+        23. Training intensity（Yesterday）
         <input type="number" name="exercise_rpe" min="0" max="10" />
       </label>
-      <small>※ 上記画像を参考に入力してください</small>
+      <small>※ Please enter the training intensity (RPE) based on the image above</small>
     </div>
 
     <button type="submit">送信</button>
@@ -488,9 +488,8 @@
             ">
               <h1 style="font-size: 1.6rem;">✅ 送信が完了しました</h1>
               <p style="margin-top: 16px; font-size: 1.1rem;">
-                ご協力ありがとうございました。<br>
-                高地合宿2日目、体調はいかがでしょうか？気になることがあれば気軽にお声がけください！
-                本日もよろしくお願いいたします！
+                Thank you for your response !<br>
+                Have a great day !
               </p>
 
               <button
@@ -502,7 +501,7 @@
                 "
                 onclick="location.reload()"
               >
-                もう一度入力する
+                Enter agein
               </button>
             </div>
           `;
